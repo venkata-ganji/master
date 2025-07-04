@@ -1,0 +1,45 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  transition: padding-bottom 0.3s ease;
+  
+  &.with-bottom-nav {
+    padding-bottom: 80px; // Space for bottom navigation
+  }
+}
+
+.toast-message {
+  max-width: 300px;
+  transition: all 0.3s ease;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-up {
+  animation: slideUp 0.3s ease-out;
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .main-content.with-bottom-nav {
+    padding-bottom: 70px;
+  }
+  
+  .toast-message {
+    max-width: calc(100vw - 2rem);
+  }
+}
