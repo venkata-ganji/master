@@ -1,0 +1,13 @@
+<nav class="bottom-nav fixed bottom-0 left-0 right-0 bg-white border-t border-secondary-200 px-2 py-2 z-40">
+  <div class="flex justify-around items-center max-w-lg mx-auto">
+    <button
+      *ngFor="let item of navItems"
+      (click)="navigate(item.route)"
+      class="nav-item flex flex-col items-center justify-center p-2 rounded-xl transition-all duration-200 min-w-[60px]"
+      [class.active]="isActive(item.route)"
+    >
+      <span class="text-xl mb-1">{{ item.icon }}</span>
+      <span class="text-xs font-medium">{{ item.label }}</span>
+    </button>
+  </div>
+</nav>

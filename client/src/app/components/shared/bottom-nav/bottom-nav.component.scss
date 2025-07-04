@@ -1,0 +1,43 @@
+.bottom-nav {
+  backdrop-filter: blur(20px);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.nav-item {
+  color: #64748b;
+  transition: all 0.2s ease;
+  
+  &:hover {
+    background-color: #f1f5f9;
+    color: #3b82f6;
+    transform: translateY(-2px);
+  }
+  
+  &.active {
+    background-color: #dbeafe;
+    color: #3b82f6;
+    
+    span:first-child {
+      transform: scale(1.2);
+    }
+  }
+  
+  span {
+    transition: all 0.2s ease;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-item {
+    min-width: 50px;
+    padding: 0.5rem 0.25rem;
+    
+    span:first-child {
+      font-size: 1.25rem;
+    }
+    
+    span:last-child {
+      font-size: 0.625rem;
+    }
+  }
+}
